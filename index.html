@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Herbana</title>
-    <link rel="stylesheet" type="text/css" href="/style/css/style.css" />
+
+    <!-- RETAINING STYLE SHEET  -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/font.css" />
+    <!-- NEW STYLE SHEET  -->
+    <link rel="stylesheet" type="text/css" href="/css/result-css/result.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -16,12 +21,345 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
+    <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
-  <body>
-    <div>
-      <section id="background">
+  <body class="onhover covered menu_show ">
+    <!-- RETAINING HEADERS -->
+    <div class="pace pace-inactive">
+      <div
+        class="pace-progress"
+        data-progress-text="100%"
+        data-progress="99"
+        style="transform: translate3d(100%, 0px, 0px)"
+      >
+        <div class="pace-progress-inner"></div>
+      </div>
+      <div class="pace-activity"></div>
+    </div>
+    <div
+      id="notice_header"
+      on="true"
+      style="background-color: rgb(255, 248, 232)"
+    >
+      <p style="font-size: 12px">
+        <span style="font-size: 11px"
+          >GET 20% OFF FOR MINIMUM PURCHASE OF 350K</span
+        >
+      </p>
+    </div>
+    <header class="upper_header" style="background: #a2dad1">
+      <div class="header_cont id_ver">
+        <div class="upper_header_elem lang">
+          <a href="/contact"><span>EN</span></a>
+          <span class="line">&nbsp;</span>
+          <a href=""><span>ID</span></a>
+        </div>
+        <div class="upper_header_elem acc">
+          <a href="https://herbana.id/id/akun"><span>Akun</span></a>
+        </div>
+        <div class="upper_header_elem cart">
+          <a href="https://herbana.id/id/keranjang"
+            ><span>Keranjang (<span class="cart_qty_str">0</span>)</span></a
+          >
+        </div>
+        <div class="upper_header_elem waup">
+          <a
+            rel="nofollow"
+            href="https://api.whatsapp.com/send?phone=6282123100111"
+            ><img
+              id="_waicon"
+              class=""
+              src="https://herbana.id/img/icons/wa.svg"
+              alt="Whatsapp"
+              target="_blank"
+            /><span>0821 2310 0111</span></a
+          >
+        </div>
+      </div>
+    </header>
+    <header class="lower_header">
+      <div class="header_cont">
+        <div class="lower_header_elem header_logo">
+          <a href="https://herbana.id/id"
+            ><img
+              src="https://herbana.id/img/logo_full_black.svg"
+              alt="Herbana"
+          /></a>
+        </div>
+        <div class="lower_header_elem header_search">
+          <form
+            method="post"
+            action="https://herbana.id/id/cari"
+            onsubmit="return chksearch(this);"
+          >
+            <input class="searchinput" type="text" name="keyw" placeholder="" />
+            <input type="hidden" name="search" value="1" />
+            <input
+              class="searchsubmit"
+              type="image"
+              alt="Search"
+              src="https://herbana.id/img/icons/search_icon.svg"
+            />
+          </form>
+        </div>
+        <div class="lower_header_elem header_links id_ver">
+          <ul class="list-inline">
+            <li><a href="https://herbana.id/id" rel="Herbana">Beranda</a></li>
+            <li>
+              <a href="https://herbana.id/id/tentang" rel="About"
+                >Tentang Herbana</a
+              >
+            </li>
+            <li>
+              <a href="https://herbana.id/id/belanja" rel="Products">Belanja</a>
+            </li>
+            <li class="story_header">
+              <a href="javascript:;" rel="Story"
+                >Cerita<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="Layer_1"
+                  x="0px"
+                  y="0px"
+                  width="14.652px"
+                  height="10px"
+                  viewBox="-2.326 2.326 14.652 10"
+                  enable-background="new -2.326 2.326 14.652 10"
+                  xml:space="preserve"
+                  class="svg replaced-svg"
+                >
+                  <g>
+                    <g>
+                      <polygon
+                        points="5.002,10.759 -1.095,4.664 -0.263,3.835 5.002,9.095 10.264,3.835 11.094,4.664   "
+                      ></polygon>
+                      <path
+                        d="M5.002,11.52l-6.858-6.856l1.593-1.591l5.265,5.26l5.262-5.26l1.591,1.591L5.002,11.52z M-0.334,4.664l5.336,5.333    l5.331-5.333l-0.069-0.068l-5.262,5.26l-5.265-5.26L-0.334,4.664z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <ul class="subheader">
+                <li>
+                  <a href="https://herbana.id/id/semakin-mudah"
+                    >Effortlessly-Possible</a
+                  >
+                </li>
+                <li><a href="https://herbana.id/id/berita">Berita</a></li>
+                <li><a href="https://herbana.id/id/jurnal">Jurnal</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://herbana.id/id/kontak" rel="Contact"
+                >Hubungi Kami</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <header class="lower_header">
+      <div class="header_cont">
+        <div class="lower_header_elem header_logo">
+          <a href="https://herbana.id/id"
+            ><img
+              src="https://herbana.id/img/logo_full_black.svg"
+              alt="Herbana"
+          /></a>
+        </div>
+        <div class="lower_header_elem header_search">
+          <form
+            method="post"
+            action="https://herbana.id/id/cari"
+            onsubmit="return chksearch(this);"
+          >
+            <input class="searchinput" type="text" name="keyw" placeholder="" />
+            <input type="hidden" name="search" value="1" />
+            <input
+              class="searchsubmit"
+              type="image"
+              alt="Search"
+              src="https://herbana.id/img/icons/search_icon.svg"
+            />
+          </form>
+        </div>
+        <div class="lower_header_elem header_links id_ver">
+          <ul class="list-inline">
+            <li><a href="https://herbana.id/id" rel="Herbana">Beranda</a></li>
+            <li>
+              <a href="https://herbana.id/id/tentang" rel="About"
+                >Tentang Herbana</a
+              >
+            </li>
+            <li>
+              <a href="https://herbana.id/id/belanja" rel="Products">Belanja</a>
+            </li>
+            <li class="story_header">
+              <a href="javascript:;" rel="Story">
+                Cerita
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="Layer_1"
+                  x="0px"
+                  y="0px"
+                  width="14.652px"
+                  height="10px"
+                  viewBox="-2.326 2.326 14.652 10"
+                  enable-background="new -2.326 2.326 14.652 10"
+                  xml:space="preserve"
+                  class="svg replaced-svg"
+                >
+                  <g>
+                    <g>
+                      <polygon
+                        points="5.002,10.759 -1.095,4.664 -0.263,3.835 5.002,9.095 10.264,3.835 11.094,4.664   "
+                      ></polygon>
+                      <path
+                        d="M5.002,11.52l-6.858-6.856l1.593-1.591l5.265,5.26l5.262-5.26l1.591,1.591L5.002,11.52z M-0.334,4.664l5.336,5.333    l5.331-5.333l-0.069-0.068l-5.262,5.26l-5.265-5.26L-0.334,4.664z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <ul class="subheader">
+                <li>
+                  <a href="https://herbana.id/id/semakin-mudah"
+                    >Effortlessly-Possible</a
+                  >
+                </li>
+                <li><a href="https://herbana.id/id/berita">Berita</a></li>
+                <li><a href="https://herbana.id/id/jurnal">Jurnal</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://herbana.id/id/kontak" rel="Contact">
+                Hubungi Kami
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <header class="mobile_header search_hide">
+      <div class="mh_wrapper">
+        <div class="mobile_menu_btn init">
+          <div class="horizontal_ctn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="vertical_ctn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <a class="mobile_logo" href="https://herbana.id/id"
+          ><img src="https://herbana.id/img/logo_full_black.svg" alt="Herbana"
+        /></a>
+        <div class="mobile_search">
+          <img
+            src="https://herbana.id/img/icons/search_icon.svg"
+            alt="Search Herbana"
+          />
+        </div>
+      </div>
+      <form
+        class="mobile_search_form"
+        action="https://herbana.id/id/cari"
+        method="post"
+        onsubmit="return chksearch(this)"
+      >
+        <a href="#" class="search_close"
+          ><img
+            class=""
+            src="https://herbana.id/img/icons/close_icon.svg"
+            alt="Search Herbana"
+        /></a>
+        <input class="searchinput" type="text" name="keyw" placeholder="" />
+        <input type="hidden" name="search" value="1" />
+        <input
+          class="searchsubmit"
+          type="image"
+          alt="Search"
+          src="https://herbana.id/img/icons/search_icon.svg"
+        />
+      </form>
+      <a href="https://herbana.id/id/keranjang" class="mobilecart" rel="Cart">
         <div>
-          <img src="/assets/image/header-desktop.png" />
+          <span>Keranjang (<span class="cart_qty_str">0</span>)</span>
+          <span class="_cart_subtotal">IDR 0</span>
+        </div>
+      </a>
+    </header>
+    <div class="mobile_header_full" style="background: #a2dad1">
+      <div class="mobile_lang">
+        <a href="/contact"><span>EN</span></a>
+        <span class="line">&nbsp;</span>
+        <a href=""><span>ID</span></a>
+      </div>
+      <div class="mobile_list">
+        <ul class="list-inline">
+          <li><a href="https://herbana.id/id" rel="Herbana">Beranda</a></li>
+          <li>
+            <a href="https://herbana.id/id/tentang" rel="About"
+              >Tentang Herbana</a
+            >
+          </li>
+          <li>
+            <a href="https://herbana.id/id/belanja" rel="Products">Belanja</a>
+          </li>
+          <li class="mobile_header_open">
+            <a href="javascript:;" rel="Story"
+              >Cerita
+              <img
+                class="arrow_down"
+                src="https://herbana.id/img/icons/dropdown_arrow.svg"
+                alt="Arrow"
+              />
+            </a>
+          </li>
+          <ul class="mobile_subheader">
+            <li>
+              <a href="https://herbana.id/id/semakin-mudah"
+                >Effortlessly-Possible</a
+              >
+            </li>
+            <li><a href="https://herbana.id/id/berita">Berita</a></li>
+            <li><a href="https://herbana.id/id/jurnal">Jurnal</a></li>
+          </ul>
+          <li>
+            <a href="https://herbana.id/id/kontak" rel="Contact"
+              >Hubungi Kami</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="mobile_list_2">
+        <ul class="list-inline">
+          <li><a href="https://herbana.id/id/akun" rel="Account">Akun</a></li>
+          <li class="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=6282123100111" rel="WA"
+              ><img
+                src="https://herbana.id/img/icons/wa.svg"
+                alt="Whatsapp Icon for Herbana"
+              /><span>0821 2310 0111</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- RETAINING HEADERS -->
+    <div class="mobile_section_wrapper">
+      <!-- NEW HTML -->
+      <!-- HEADING -->
+      <section id="heading" class="top">
+        <div>
+          <img src="/placeholder/header-desktop.png" />
         </div>
         <div>
           <div>
@@ -39,13 +377,13 @@
         <div>
           <div>
             <div>
-              <img src="/assets/svg/info.svg" />
+              <img src="/placeholder/info.svg" />
             </div>
             <div>
               <p>Please Consult Doctor / Consume with Adult Supervision</p>
             </div>
             <div>
-              <img src="/assets/svg/info.svg" />
+              <img src="/placeholder/info.svg" />
             </div>
           </div>
         </div>
@@ -54,17 +392,17 @@
         <div class="product-desktop">
           <div>
             <div>
-              <img src="/assets/svg/fitness.svg" />
+              <img src="/placeholder/fitness.svg" />
               <span>
                 FOR YOUR
                 <span>STAMINA</span>
               </span>
             </div>
             <div>
-              <img src="/assets/image/product.png" />
+              <img src="/placeholder/product.png" />
             </div>
             <div>
-              <img src="/assets/svg/product_type.svg" />
+              <img src="/placeholder/product_type.svg" />
               <span>Temulawak</span>
             </div>
             <div>
@@ -88,17 +426,17 @@
         <div class="product-desktop">
           <div>
             <div>
-              <img src="/assets/svg/fitness.svg" />
+              <img src="/placeholder/fitness.svg" />
               <span>
                 FOR YOUR
                 <span>STAMINA</span>
               </span>
             </div>
             <div>
-              <img src="/assets/image/product.png" />
+              <img src="/placeholder/product.png" />
             </div>
             <div>
-              <img src="/assets/svg/product_type.svg" />
+              <img src="/placeholder/product_type.svg" />
               <span>Temulawak</span>
             </div>
             <div>
@@ -122,17 +460,17 @@
         <div class="product-desktop">
           <div>
             <div>
-              <img src="/assets/svg/fitness.svg" />
+              <img src="/placeholder/fitness.svg" />
               <span>
                 FOR YOUR
                 <span>STAMINA</span>
               </span>
             </div>
             <div>
-              <img src="/assets/image/product.png" />
+              <img src="/placeholder/product.png" />
             </div>
             <div>
-              <img src="/assets/svg/product_type.svg" />
+              <img src="/placeholder/product_type.svg" />
               <span>Temulawak</span>
             </div>
             <div>
@@ -156,17 +494,17 @@
         <div class="product-desktop">
           <div>
             <div>
-              <img src="/assets/svg/fitness.svg" />
+              <img src="/placeholder/fitness.svg" />
               <span>
                 FOR YOUR
                 <span>STAMINA</span>
               </span>
             </div>
             <div>
-              <img src="/assets/image/product.png" />
+              <img src="/placeholder/product.png" />
             </div>
             <div>
-              <img src="/assets/svg/product_type.svg" />
+              <img src="/placeholder/product_type.svg" />
               <span>Temulawak</span>
             </div>
             <div>
@@ -190,17 +528,17 @@
         <div class="product-desktop">
           <div>
             <div>
-              <img src="/assets/svg/fitness.svg" />
+              <img src="/placeholder/fitness.svg" />
               <span>
                 FOR YOUR
                 <span>STAMINA</span>
               </span>
             </div>
             <div>
-              <img src="/assets/image/product.png" />
+              <img src="/placeholder/product.png" />
             </div>
             <div>
-              <img src="/assets/svg/product_type.svg" />
+              <img src="/placeholder/product_type.svg" />
               <span>Temulawak</span>
             </div>
             <div>
@@ -227,17 +565,17 @@
           <div class="product-mobile">
             <div>
               <div>
-                <img src="/assets/svg/fitness.svg" />
+                <img src="/placeholder/fitness.svg" />
                 <span>
                   FOR YOUR
                   <span>STAMINA</span>
                 </span>
               </div>
               <div>
-                <img src="/assets/image/product.png" />
+                <img src="/placeholder/product.png" />
               </div>
               <div>
-                <img src="/assets/svg/product_type.svg" />
+                <img src="/placeholder/product_type.svg" />
                 <span>Temulawak</span>
               </div>
               <div>
@@ -261,17 +599,17 @@
           <div class="product-mobile">
             <div>
               <div>
-                <img src="/assets/svg/fitness.svg" />
+                <img src="/placeholder/fitness.svg" />
                 <span>
                   FOR YOUR
                   <span>STAMINA</span>
                 </span>
               </div>
               <div>
-                <img src="/assets/image/product.png" />
+                <img src="/placeholder/product.png" />
               </div>
               <div>
-                <img src="/assets/svg/product_type.svg" />
+                <img src="/placeholder/product_type.svg" />
                 <span>Temulawak</span>
               </div>
               <div>
@@ -295,17 +633,17 @@
           <div class="product-mobile">
             <div>
               <div>
-                <img src="/assets/svg/fitness.svg" />
+                <img src="/placeholder/fitness.svg" />
                 <span>
                   FOR YOUR
                   <span>STAMINA</span>
                 </span>
               </div>
               <div>
-                <img src="/assets/image/product.png" />
+                <img src="/placeholder/product.png" />
               </div>
               <div>
-                <img src="/assets/svg/product_type.svg" />
+                <img src="/placeholder/product_type.svg" />
                 <span>Temulawak</span>
               </div>
               <div>
@@ -329,17 +667,17 @@
           <div class="product-mobile">
             <div>
               <div>
-                <img src="/assets/svg/fitness.svg" />
+                <img src="/placeholder/fitness.svg" />
                 <span>
                   FOR YOUR
                   <span>STAMINA</span>
                 </span>
               </div>
               <div>
-                <img src="/assets/image/product.png" />
+                <img src="/placeholder/product.png" />
               </div>
               <div>
-                <img src="/assets/svg/product_type.svg" />
+                <img src="/placeholder/product_type.svg" />
                 <span>Temulawak</span>
               </div>
               <div>
@@ -363,17 +701,17 @@
           <div class="product-mobile">
             <div>
               <div>
-                <img src="/assets/svg/fitness.svg" />
+                <img src="/placeholder/fitness.svg" />
                 <span>
                   FOR YOUR
                   <span>STAMINA</span>
                 </span>
               </div>
               <div>
-                <img src="/assets/image/product.png" />
+                <img src="/placeholder/product.png" />
               </div>
               <div>
-                <img src="/assets/svg/product_type.svg" />
+                <img src="/placeholder/product_type.svg" />
                 <span>Temulawak</span>
               </div>
               <div>
@@ -396,7 +734,7 @@
           </div>
         </div>
       </section>
-      <footer>
+      <div id="cta">
         <div>
           <div>
             <div>
@@ -430,8 +768,118 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- END OF NEW HTML -->
+
+      <!-- RETAINING FOOTER -->
+      <footer>
+        <div class="footer_cont">
+          <div class="footer_left">
+            <div class="footer_menu">
+              <span class="footer_title">INFORMASI UMUM</span>
+              <ul>
+                <li><a href="https://herbana.id/id/akun">Akun</a></li>
+                <li>
+                  <a href="https://herbana.id/id/tentang">Tentang Herbana</a>
+                </li>
+                <li><a href="https://herbana.id/id/belanja">Belanja</a></li>
+                <li>
+                  <a href="https://herbana.id/id/semakin-mudah"
+                    >Effortlessly-Possible</a
+                  >
+                </li>
+                <li><a href="https://herbana.id/id/berita">Berita</a></li>
+                <li><a href="https://herbana.id/id/jurnal">Jurnal</a></li>
+                <li>
+                  <a href="https://herbana.id/id/kontak">Hubungi Kami </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer_menu">
+              <span class="footer_title">PUSAT BANTUAN</span>
+              <ul>
+                <li>
+                  <a href="https://herbana.id/id/bantuan/lokasi-penjualan"
+                    >Toko &amp; Stockist</a
+                  >
+                </li>
+                <li>
+                  <a href="https://herbana.id/id/bantuan/kebijakan-privasi"
+                    >Kebijakan Privasi</a
+                  >
+                </li>
+                <li>
+                  <a href="https://herbana.id/id/bantuan/syarat-ketentuan"
+                    >Syarat &amp; Ketentuan</a
+                  >
+                </li>
+                <li>
+                  <a href="https://herbana.id/id/bantuan/faq"
+                    >FAQ &amp; Bantuan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://herbana.id/id/bantuan/pengiriman-pengembalian"
+                    >Pengiriman &amp; Pengembalian</a
+                  >
+                </li>
+
+                <li><a href="https://herbana.id/id/bantuan/pers">Pers</a></li>
+              </ul>
+            </div>
+            <div class="footer_copyright">
+              <span class="copyright_text">©</span> HERBANA 2023. Hak Cipta
+              dilindungi undang-undang.
+            </div>
+          </div>
+          <div class="footer_right">
+            <div class="sub_wrapper">
+              <span class="footer_title">BERLANGGANAN NEWSLETTER</span>
+              <span class="subscribe_text"
+                >Terima update tentang produk kami, tips gaya hidup, penawaran
+                eksklusif dan banyak lagi!</span
+              >
+              <div id="box_alert_subscribe" class=""></div>
+              <form class="subcribe_form" id="form-subscribe">
+                <input
+                  type="email"
+                  name="subs_email"
+                  placeholder=""
+                  required=""
+                />
+                <input type="submit" value="KIRIM" />
+              </form>
+            </div>
+            <div class="soc_med_wrap">
+              <a
+                rel="nofollow"
+                href="https://www.facebook.com/herbana.id/"
+                target="_blank"
+                ><img
+                  src="https://herbana.id/img/icons/fb_icon.svg"
+                  alt="Herbana Facebook"
+              /></a>
+              <a
+                rel="nofollow"
+                href="https://instagram.com/herbana.id"
+                target="_blank"
+                ><img
+                  src="https://herbana.id/img/icons/ig_icon.svg"
+                  alt="Herbana Instagram"
+              /></a>
+              <a rel="nofollow" href="mailto:hello@herbana.id" target="_blank"
+                ><img
+                  src="https://herbana.id/img/icons/msg_icon.svg"
+                  alt="Herbana Mail"
+              /></a>
+            </div>
+          </div>
+        </div>
       </footer>
+      <!-- RETAINING FOOTER -->
     </div>
+    <!-- RETAINING JS -->
     <script
       type="text/javascript"
       src="//code.jquery.com/jquery-1.11.0.min.js"
@@ -444,34 +892,12 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+    <script src="/js/vendor/pace.min.js"></script>
+    <script src="/js/vendor/headroom.min.js"></script>
+    <script src="/js/vendor/jquery.headroom.js"></script>
+    <script src="/js/main.js"></script>
 
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#slider').slick({
-          dots: true,
-          arrows: false,
-          autoplay: false,
-          pauseOnHover: false,
-          fade: false,
-          easing: 'ease',
-          speed: 600,
-        })
-
-        $('[data-space]').each(function () {
-          var $this = $(this),
-            $space = $this.attr('data-space')
-
-          $('.slick-slide').css({
-            marginLeft: $space + 'px',
-            marginRight: $space + 'px',
-          })
-
-          $('.slick-list').css({
-            marginLeft: -$space + 'px',
-            marginRight: -$space / 2 + 'px',
-          })
-        })
-      })
-    </script>
+    <!-- NEW JS -->
+    <script src="/js/result.js"></script>
   </body>
 </html>
