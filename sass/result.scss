@@ -433,148 +433,140 @@
 }
 
 #cta {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 4rem;
-
+  width: 100%;
+  max-width: 1300px;
+  margin: 0px auto;
+  border: 1.5px solid #e46b37;
+  border-radius: 1rem;
+  margin-bottom: 60px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
   @media (min-width: 768px) {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 5rem;
+    min-height: 20rem;
   }
+  & > div:first-child {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #e46b37;
+    flex-grow: 1;
+    padding: 1.5rem 3rem;
 
-  & > div {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    background-color: #e46b37;
-    border: 1.5px solid #e46b37;
-    border-radius: 1rem;
+    // content
+    & > div:not(:last-child) {
+      font-family: 'Maison';
+      font-size: 1.563rem;
+      color: white;
+      font-weight: normal;
+      line-height: 110%;
 
-    & > div {
+      @media (min-width: 768px) {
+        font-size: 1.875rem;
+      }
+    }
+    // button
+    & > div:last-child {
       display: flex;
-      flex-direction: column;
-      border-radius: 1rem;
-      border: 1.5px solid #e46b37;
+      justify-content: center;
+      margin-top: 3rem;
 
-      & > div:first-child {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 1.9rem;
-
-        @media (min-width: 768px) {
-          min-height: 18rem;
-          padding: 2rem;
-        }
-
-        span {
-          font-family: 'Maison';
-          font-size: 1.563rem;
-          color: white;
-          font-weight: normal;
-          line-height: 110%;
-
-          @media (min-width: 768px) {
-            font-size: 1.875rem;
-          }
-        }
-
-        & > div {
-          display: flex;
-          justify-content: center;
-          margin-top: 3rem;
-
-          @media (min-width: 768px) {
-            justify-content: end;
-          }
-
-          button {
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 0.75rem;
-            padding-bottom: 0.75rem;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-            color: #e46b37;
-            font-family: 'Maison';
-            font-weight: bold;
-            text-align: center;
-            border: 1.5px solid #e46b37;
-            border-radius: 9999px;
-            font-size: 1rem;
-            background-color: white;
-            gap: 0.75rem;
-            transition-property: all;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 300ms;
-
-            @media (min-width: 768px) {
-            }
-
-            &:hover {
-              background-color: #e46b37;
-              color: white;
-              border: 1.5px solid white;
-
-              path {
-                fill: white;
-              }
-            }
-
-            svg {
-              padding-bottom: 0.125rem;
-              height: 0.875rem;
-            }
-          }
-        }
+      @media (min-width: 768px) {
+        justify-content: end;
       }
 
-      & > div:last-child {
+      button {
+        cursor: pointer;
         display: flex;
         justify-content: center;
-        background-color: #ffffff;
-        padding: 1rem;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
+        align-items: center;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        color: #e46b37;
+        font-family: 'Maison';
+        font-weight: bold;
+        text-align: center;
+        border: 1.5px solid #e46b37;
+        border-radius: 9999px;
+        font-size: 1rem;
+        background-color: white;
+        gap: 0.75rem;
 
         @media (min-width: 768px) {
-          width: 100%;
-          padding: 1rem 0;
         }
 
-        span {
-          text-align: center;
-          font-family: 'Maison';
-          font-size: 0.75rem;
-          color: #e46b37;
-          letter-spacing: 0.1em;
+        svg {
+          padding-bottom: 0.125rem;
+          height: 0.875rem;
+        }
+
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+        path {
+          transition-property: all;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 300ms;
+        }
+
+        &:hover {
+          background-color: #e46b37;
+          color: white;
+          border: 1.5px solid white;
+
+          path {
+            fill: white;
+          }
         }
       }
+    }
+  }
+
+  & > div:last-child {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 1rem;
+
+    text-align: center;
+    font-family: 'Maison';
+    font-size: 0.75rem;
+    color: #e46b37;
+    letter-spacing: 0.1em;
+    flex-grow: 0;
+    @media (min-width: 768px) {
+      width: 100%;
+      padding: 1rem 0;
+    }
+  }
+  &.no-code {
+    & > div:last-child {
+      display: none;
     }
   }
 }
 
 .slick-dots {
-  bottom: auto!important;
+  bottom: auto !important;
   margin-top: 2rem !important;
 
   button {
     border-radius: 100%;
-    background-color: #D9D9D9 !important;
+    background-color: #d9d9d9 !important;
     text-indent: -9999px;
     width: 14px !important;
     height: 14px !important;
-  }		
+  }
 
   li {
     width: 14px !important;
     height: 14px !important;
     margin: 0 8px !important;
   }
-  
+
   li.slick-active button {
     background-color: #e46b37 !important;
   }
