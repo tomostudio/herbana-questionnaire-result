@@ -1,10 +1,11 @@
 #heading {
   position: relative;
   width: 100%;
-  height: fit-content;
-  min-height: 50vh;
+  height: 50vh;
+  min-height: 455px;
   padding: 0px;
   @media (min-width: 768px) {
+    height: fit-content;
     min-height: 50vh;
   }
 
@@ -35,24 +36,28 @@
       content: '';
       display: block;
       width: 100%;
-      height: 25vh;
-      min-height: 100px;
+      height: 105px;
+      min-height: 0;
       @media (min-width: 768px) {
+        height: 25vh;
         min-height: 200px;
       }
     }
     & > div {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       width: 100%;
-      max-width: 48rem;
-      height: 100%;
+      max-width: 52rem;
+      flex-grow: 1;
+      height: auto;
       text-align: left;
-      padding: 0 20px;
+      padding-top: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
 
       @media (min-width: 768px) {
+        height: 100%;
         padding: 0;
         text-align: center;
         justify-content: end;
@@ -62,19 +67,22 @@
         font-family: 'Maison';
         font-size: 1.563rem;
         font-weight: normal;
+        line-height: 105%;
 
         @media (min-width: 768px) {
-          font-size: 2.25rem;
+          font-size: 2.188rem;
         }
       }
       p {
         font-family: 'Maison';
         font-weight: normal;
-        max-width: 40rem;
         width: 100%;
+        line-height: 130%;
+        margin-top: 0.5rem;
 
         @media (min-width: 768px) {
-          font-size: 14px;
+          font-size: 1.125rem;
+          margin: 0;
         }
       }
     }
@@ -90,10 +98,11 @@
     border: 1.5px solid #e46b37;
     background-color: white;
     margin: 0 20px;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    left: 0;
+    bottom: -7%;
 
     @media (min-width: 768px) {
+      bottom: 0;
       width: max-content;
       padding: 0;
       left: 50%;
@@ -117,8 +126,8 @@
         height: 23px;
 
         img {
-          width: 100%;
-          height: 100%;
+          width: 20px;
+          height: 20px;
           object-fit: contain;
         }
       }
@@ -132,6 +141,7 @@
           color: #e46b37;
           margin: 0;
           letter-spacing: 0.01em;
+          text-transform: uppercase;
 
           @media (min-width: 768px) {
             font-size: 1rem;
@@ -146,7 +156,7 @@
   display: none;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   max-width: 1280px;
   margin: 0 auto;
   padding: 6rem 50px;
@@ -156,18 +166,22 @@
   }
 
   .product-desktop {
-    width: calc((100% / 2) - 1rem);
+    width: calc((100% / 2) - 1.5rem);
     border: 1.5px solid #bbbbbb;
     border-radius: 1rem;
 
     @media (min-width: 945px) {
-      width: calc((100% / 3) - 1.5rem + 50px);
+      width: calc((100% / 3) - (1.5rem + 50px));
     }
 
     & > div {
       display: flex;
       flex-direction: column;
-      padding: 2.5rem;
+      padding: 1.8rem;
+
+      @media (min-width: 1025px) {
+        padding: 2.5rem;
+      }
 
       & > div:first-child {
         display: flex;
@@ -177,19 +191,30 @@
         margin-bottom: 0.5rem;
 
         img {
-          width: 18px;
-          height: 18px;
-          object-fit: contain;
+          width: 19px;
+          height: 19px;
+          object-fit: cover;
         }
 
         span {
           font-family: 'Maison';
           font-weight: bold;
-          font-size: 14px;
-          letter-spacing: 0.05em;
+          font-size: 0.875rem;
+          letter-spacing: 0.1em;
+
+          @media (min-width: 768px) {
+            letter-spacing: 0.05em;
+  
+          }
 
           span {
             color: #e46b37;
+            letter-spacing: 0.1em;
+
+            @media (min-width: 768px) {
+              letter-spacing: 0.05em;
+    
+            }
           }
         }
       }
@@ -212,7 +237,7 @@
         padding: 1.5rem 0;
 
         img {
-          width: 11rem;
+          width: 10rem;
           object-fit: contain;
         }
 
@@ -221,6 +246,7 @@
           font-family: 'Maison';
           font-size: 1.125rem;
           font-weight: 400;
+          letter-spacing: 0.1em;
         }
       }
 
@@ -236,11 +262,12 @@
           font-family: 'Maison';
           font-weight: bold;
           color: #bbbbbb;
+          letter-spacing: 0.1em;
         }
 
         p {
           margin: 0;
-          font-size: 14px;
+          font-size: 0.875rem;
           font-family: 'Maison';
           line-height: 24px;
         }
@@ -257,6 +284,7 @@
           font-family: 'Maison';
           font-weight: bold;
           color: #bbbbbb;
+          letter-spacing: 0.1em;
         }
 
         ul {
@@ -266,7 +294,7 @@
 
           li {
             padding-top: 0.25rem;
-            font-size: 14px;
+            font-size: 0.875rem;
             font-family: 'Maison';
             letter-spacing: 0.1em;
           }
@@ -281,11 +309,12 @@
         border: 1.5px solid #e46b37;
         border-radius: 9999px;
         width: fit-content;
-        font-size: 14px;
+        font-size: 0.75rem;
         font-family: 'Maison';
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 300ms;
+        letter-spacing: 0.1em;
 
         &:hover {
           background-color: #e46b37;
@@ -331,10 +360,21 @@
           font-family: 'Maison';
           font-weight: bold;
           font-size: 0.75rem;
-          letter-spacing: 0.05em;
+          letter-spacing: 0.1em;
+
+          @media (min-width: 768px) {
+            letter-spacing: 0.05em;
+  
+          }
 
           span {
             color: #e46b37;
+            letter-spacing: 0.1em;
+
+            @media (min-width: 768px) {
+              letter-spacing: 0.05em;
+    
+            }
           }
         }
       }
@@ -366,6 +406,7 @@
           font-family: 'Maison';
           font-size: 1rem;
           font-weight: 400;
+          letter-spacing: 0.1em;
         }
       }
 
@@ -381,11 +422,12 @@
           font-family: 'Maison';
           font-weight: bold;
           color: #bbbbbb;
+          letter-spacing: 0.1em;
         }
 
         p {
           margin: 0;
-          font-size: 0.813rem;
+          font-size: 0.75rem;
           font-family: 'Maison';
           line-height: 18px;
         }
@@ -402,6 +444,7 @@
           font-family: 'Maison';
           font-weight: bold;
           color: #bbbbbb;
+          letter-spacing: 0.1em;
         }
 
         ul {
@@ -411,8 +454,9 @@
 
           li {
             padding-top: 0.25rem;
-            font-size: 0.813rem;
+            font-size: 0.75rem;
             font-family: 'Maison';
+            line-height: 18px;
           }
         }
       }
@@ -430,6 +474,7 @@
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 300ms;
+        letter-spacing: 0.1em;
 
         &:hover {
           background-color: #e46b37;
@@ -460,7 +505,11 @@
     justify-content: space-between;
     background: #e46b37;
     flex-grow: 1;
+    padding: 1.75rem 2rem;
+
+    @media (min-width: 768px) {
     padding: 1.5rem 3rem;
+    }
 
     // content
     & > div:not(:last-child) {
@@ -468,10 +517,11 @@
       font-size: 1.563rem;
       color: white;
       font-weight: normal;
-      line-height: 110%;
+      line-height: 106.5%;
 
       @media (min-width: 768px) {
-        font-size: 1.875rem;
+        font-size: 2.188rem;
+        line-height: 110%;
       }
     }
     // button
@@ -499,11 +549,13 @@
         text-align: center;
         border: 1.5px solid #e46b37;
         border-radius: 9999px;
-        font-size: 1rem;
+        font-size: 0.875rem;
         background-color: white;
         gap: 0.75rem;
+        letter-spacing: 0.1em;
 
         @media (min-width: 768px) {
+          font-size: 1rem;
         }
 
         svg {
@@ -534,10 +586,9 @@
   }
 
   & > div:last-child {
-    display: flex;
-    justify-content: center;
+    display: block;
     background-color: #ffffff;
-    padding: 1rem;
+    padding: 0.75rem;
 
     text-align: center;
     font-family: 'Maison';
@@ -545,9 +596,12 @@
     color: #e46b37;
     letter-spacing: 0.1em;
     flex-grow: 0;
+
     @media (min-width: 768px) {
       width: 100%;
       padding: 1rem 0;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
     }
   }
   &.no-code {
@@ -577,5 +631,13 @@
 
   li.slick-active button {
     background-color: #e46b37 !important;
+  }
+}
+
+.cta_container {
+  padding: 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 0;
   }
 }
