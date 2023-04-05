@@ -1,51 +1,39 @@
+function slider() {
+  if ($(window).width() < 751) {
+    $("#slider").slick({
+      dots: true,
+      arrows: false,
+      autoplay: false,
+      pauseOnHover: false,
+      fade: false,
+      easing: "ease",
+      speed: 600,
+      slidesToShow: 1,
+    });
+    $("[data-space]").each(function () {
+      var $this = $(this),
+        $space = $this.attr("data-space");
+      $(".slick-slide").css({
+        marginLeft: $space + "px",
+        marginRight: $space + "px",
+      });
+      $(".slick-list").css({
+        marginLeft: -$space + "px",
+        marginRight: -$space / 2 + "px",
+      });
+    });
+  }else {
+    if($('#slider').hasClass('slick-initialized')) {
+      console.log("ada")
+      $('#slider').slick('unslick');
+    }
+  }
+}
+
 $(document).ready(function () {
-  // $('#slider').slick({
-  //   dots: true,
-  //   arrows: false,
-  //   autoplay: false,
-  //   pauseOnHover: false,
-  //   fade: false,
-  //   easing: 'ease',
-  //   speed: 600,
-  //   centerMode: true,
-  //   variableWidth: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 800,
-  //       settings: "unslick",
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     // You can unslick at a given breakpoint now by adding:
-  //     // settings: "unslick"
-  //     // instead of a settings object
-  //   ],
-  // });
+  slider();
+});
 
-  // $('[data-space]').each(function () {
-  //   var $this = $(this),
-  //     $space = $this.attr('data-space');
-
-  //   $('.slick-slide').css({
-  //     marginLeft: $space + 'px',
-  //     marginRight: $space + 'px',
-  //   });
-
-  //   $('.slick-list').css({
-  //     marginLeft: -$space + 'px',
-  //     marginRight: -$space / 2 + 'px',
-  //   });
-  // });
+$(window).on("resize", function () {
+  slider();
 });

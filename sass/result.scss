@@ -1,7 +1,7 @@
 #heading {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: calc(50vh + 105px);
   min-height: 200px;
   padding: 0px;
   @media (min-width: 599px) {
@@ -51,7 +51,7 @@
       content: '';
       display: block;
       width: 100%;
-      height: 75px;
+      height: 105px;
       flex-grow: 1;
       @media (min-width: 599px) {
         height: 200px;
@@ -69,14 +69,15 @@
       flex-grow: 1;
       height: auto;
       text-align: left;
-      padding-top: 40px;
-      justify-content: end;
+      padding-top: 30px;
+      justify-content: start;
 
       @media (min-width: 751px) {
         height: 100%;
         padding: 0;
         align-items: center;
         text-align: center;
+        justify-content: end;
       }
 
       h1 {
@@ -107,20 +108,26 @@
   & > div.doctor {
     z-index: 2;
     max-width: 100%;
+    width: 100%;
     position: absolute;
     bottom: 0%;
-    border-radius: 1.25rem;
-    border: 1.5px solid #e46b37;
-    background-color: white;
-    margin: 0 20px;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    padding: 0 20px;
+    left: 0;
+    transform: translate(0%, 50%);
+    display: flex;
+    justify-content: center;
 
     @media (min-width: 751px) {
       padding: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
     }
 
     & > div {
+      border-radius: 1.25rem;
+      border: 1.5px solid #e46b37;
+      background-color: white;
+
       display: flex;
       align-items: center;
       padding: 0.75rem 1.25rem 0.65rem;
@@ -164,21 +171,19 @@
 }
 
 section.products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  max-width: 1300px;
-  margin: 0 auto;
   padding: 6rem 0px;
 
   @media (min-width: 751px) {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
   }
 
   & .product {
-    width: 80vw;
-    max-width: 350px;
+    width: 100vw;
     border: 1.5px solid #bbbbbb;
     border-radius: 1.5rem;
     display: flex;
@@ -673,8 +678,7 @@ section.products {
 }
 
 .slick-dots {
-  bottom: auto !important;
-  margin-top: 2rem !important;
+  bottom: -4rem !important;
 
   button {
     border-radius: 100%;
