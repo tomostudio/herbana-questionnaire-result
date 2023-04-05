@@ -4,6 +4,7 @@
   height: 50vh;
   min-height: 200px;
   padding: 0px;
+  max-height: 400px;
   @media (min-width: 599px) {
     height: 50vh;
     min-height: 455px;
@@ -186,22 +187,73 @@
   }
 }
 
-section.products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 6rem 0px;
+.cta_container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0px auto;
 
+  padding: 0px 20px;
+  @media (min-width: 600px) {
+    // Tablet
+    padding: 0px 40px;
+  }
   @media (min-width: 751px) {
-    display: flex;
+    //Desktop
+    padding: 0px 50px;
+  }
+}
+.product_container {
+  width: 100%;
+  padding: 0px 0px;
+  max-width: 1400px;
+  margin: 0px auto;
+  overflow: auto;
+
+  @media (min-width: 600px) {
+    // Tablet
+    padding: 0px 40px;
+  }
+  @media (min-width: 751px) {
+    //Desktop
+    padding: 0px 50px;
   }
 
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.product_container::-webkit-scrollbar {
+  display: none;
+}
+section.products {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 auto;
+  padding: 6rem 0px 4rem;
+  justify-content: flex-start;
+  position: relative;
+  gap: 1.5rem;
+  @media (min-width: 600px) {
+    padding: 6rem 0px 4rem;
+    width: 100%;
+    display: flex;
+    max-width: 1300px;
+    justify-content: center;
+    flex-wrap:  wrap;
+  }
+
+  & .spacer {
+    display: block;
+    width: 1px;
+    height: auto;
+    flex-shrink: 0;
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
   & .product {
+    flex-shrink: 0;
     width: 80vw;
-    max-width: 250px;
+    max-width: 350px;
     border: 1.5px solid #bbbbbb;
     border-radius: 1.5rem;
     display: flex;
@@ -531,36 +583,6 @@ section.products {
         }
       }
     }
-  }
-}
-.cta_container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0px auto;
-
-  padding: 0px 20px;
-  @media (min-width: 600px) {
-    // Tablet
-    padding: 0px 40px;
-  }
-  @media (min-width: 751px) {
-    //Desktop
-    padding: 0px 50px;
-  }
-}
-.product_container {
-  width: 100%;
-  padding: 0px 20px;
-  max-width: 1400px;
-  margin: 0px auto;
-
-  @media (min-width: 600px) {
-    // Tablet
-    padding: 0px 40px;
-  }
-  @media (min-width: 751px) {
-    //Desktop
-    padding: 0px 50px;
   }
 }
 #cta {
