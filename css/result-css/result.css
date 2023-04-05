@@ -4,6 +4,7 @@
   height: calc(50vh + 105px);
   min-height: 200px;
   padding: 0px;
+  max-height: 400px;
 }
 @media (min-width: 599px) {
   #heading {
@@ -198,21 +199,85 @@
   }
 }
 
-section.products {
-  padding: 6rem 0px;
+.cta_container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+@media (min-width: 600px) {
+  .cta_container {
+    padding: 0px 40px;
+  }
 }
 @media (min-width: 751px) {
+  .cta_container {
+    padding: 0px 50px;
+  }
+}
+
+.product_container {
+  width: 100%;
+  padding: 0px 0px;
+  max-width: 1400px;
+  margin: 0px auto;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+@media (min-width: 600px) {
+  .product_container {
+    padding: 0px 40px;
+  }
+}
+@media (min-width: 751px) {
+  .product_container {
+    padding: 0px 50px;
+  }
+}
+
+.product_container::-webkit-scrollbar {
+  display: none;
+}
+
+section.no_slider .product {
+  width: 80vw !important;
+  max-width: 350px !important;
+}
+
+section.products {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 auto;
+  padding: 6rem 0px 4rem;
+  justify-content: flex-start;
+  position: relative;
+  gap: 1.5rem;
+}
+@media (min-width: 600px) {
   section.products {
+    padding: 6rem 0px 4rem;
+    width: 100%;
     display: flex;
+    max-width: 1300px;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    max-width: 1300px;
-    margin: 0 auto;
+  }
+}
+section.products .spacer {
+  display: block;
+  width: 1px;
+  height: auto;
+  flex-shrink: 0;
+}
+@media (min-width: 600px) {
+  section.products .spacer {
+    display: none;
   }
 }
 section.products .product {
-  width: 100vw;
+  width: 100%;
+  flex-shrink: 0;
   border: 1.5px solid #bbbbbb;
   border-radius: 1.5rem;
   display: flex;
@@ -371,180 +436,15 @@ section.products #slider {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
+  padding: 0 20px;
 }
-
-#products-mobile {
-  padding: 4.5rem 20px;
+section.products #slider .slick-slide {
+  margin-left: 20px;
+  margin-right: 20px;
 }
-@media (min-width: 751px) {
-  #products-mobile {
-    display: none;
-  }
-}
-#products-mobile .product-mobile {
-  border: 1.5px solid #bbbbbb;
-  border-radius: 1rem;
-  gap: 1.5rem;
-}
-#products-mobile .product-mobile > div {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-}
-#products-mobile .product-mobile > div > div:first-child {
-  display: flex;
-  align-items: end;
-  width: 100%;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-#products-mobile .product-mobile > div > div:first-child img {
-  width: 14px;
-  height: 14px;
-  object-fit: contain;
-}
-#products-mobile .product-mobile > div > div:first-child span {
-  font-family: "Maison";
-  font-weight: bold;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-}
-@media (min-width: 751px) {
-  #products-mobile .product-mobile > div > div:first-child span {
-    letter-spacing: 0.05em;
-  }
-}
-#products-mobile .product-mobile > div > div:first-child span span {
-  color: #e46b37;
-  letter-spacing: 0.1em;
-}
-@media (min-width: 751px) {
-  #products-mobile .product-mobile > div > div:first-child span span {
-    letter-spacing: 0.05em;
-  }
-}
-#products-mobile .product-mobile > div > div:nth-child(2) {
-  padding: 1rem 0;
-  border-top: 1.5px solid #bbbbbb;
-  border-bottom: 1.5px solid #bbbbbb;
-}
-#products-mobile .product-mobile > div > div:nth-child(2) img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-#products-mobile .product-mobile > div > div:nth-child(3) {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem 0;
-}
-#products-mobile .product-mobile > div > div:nth-child(3) img {
-  width: 144px;
-  object-fit: contain;
-}
-#products-mobile .product-mobile > div > div:nth-child(3) span {
-  margin-top: 0.25rem;
-  font-family: "Maison";
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-}
-#products-mobile .product-mobile > div > div:nth-child(4) {
-  padding: 1rem 0;
-  border-top: 1.5px solid #bbbbbb;
-  border-bottom: 1.5px solid #bbbbbb;
-}
-#products-mobile .product-mobile > div > div:nth-child(4) span {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.625rem;
-  font-family: "Maison";
-  font-weight: bold;
-  color: #bbbbbb;
-  letter-spacing: 0.1em;
-}
-#products-mobile .product-mobile > div > div:nth-child(4) p {
-  margin: 0;
-  font-size: 0.75rem;
-  font-family: "Maison";
-  line-height: 18px;
-}
-#products-mobile .product-mobile > div > div:nth-child(5) {
-  padding: 1rem 0;
-  border-bottom: 1.5px solid #bbbbbb;
-}
-#products-mobile .product-mobile > div > div:nth-child(5) span {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.625rem;
-  font-family: "Maison";
-  font-weight: bold;
-  color: #bbbbbb;
-  letter-spacing: 0.1em;
-}
-#products-mobile .product-mobile > div > div:nth-child(5) ul {
-  margin: 0;
-  list-style-position: inside;
-  padding-left: 0;
-}
-#products-mobile .product-mobile > div > div:nth-child(5) ul li {
-  padding-top: 0.25rem;
-  font-size: 0.75rem;
-  font-family: "Maison";
-  line-height: 18px;
-}
-#products-mobile .product-mobile > div > button {
-  padding: 0.5rem 1.25rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  background: none;
-  border: 1.5px solid #e46b37;
-  border-radius: 9999px;
-  width: fit-content;
-  font-size: 0.625rem;
-  font-family: "Maison";
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-  letter-spacing: 0.1em;
-}
-#products-mobile .product-mobile > div > button:hover {
-  background-color: #e46b37;
-  color: white;
-}
-
-.cta_container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0px auto;
-  padding: 0px 20px;
-}
-@media (min-width: 600px) {
-  .cta_container {
-    padding: 0px 40px;
-  }
-}
-@media (min-width: 751px) {
-  .cta_container {
-    padding: 0px 50px;
-  }
-}
-
-.product_container {
-  width: 100%;
-  padding: 0px 20px;
-  max-width: 1400px;
-  margin: 0px auto;
-}
-@media (min-width: 600px) {
-  .product_container {
-    padding: 0px 40px;
-  }
-}
-@media (min-width: 751px) {
-  .product_container {
-    padding: 0px 50px;
-  }
+section.products #slider .slick-list {
+  margin-left: -20px;
+  margin-right: -10px;
 }
 
 #cta {
