@@ -212,7 +212,7 @@
 
   @media (min-width: 600px) {
     // Tablet
-    padding: 0px 40px;
+    padding: 0px 0px;
   }
   @media (min-width: 751px) {
     //Desktop
@@ -226,28 +226,21 @@
   display: none;
 }
 
-section.no_slider {
-  & .product {
-    width: 80vw !important;
-    max-width: 350px !important;
-  }
-}
-
 section.products {
   display: flex;
   flex-flow: row nowrap;
   margin: 0 auto;
-  padding: 6rem 0px 4rem;
+  padding: 6rem 0px 6rem;
   justify-content: flex-start;
   position: relative;
   gap: 1.5rem;
-  @media (min-width: 600px) {
+  @media (min-width: 751px) {
     padding: 6rem 0px 4rem;
     width: 100%;
     display: flex;
     max-width: 1300px;
     justify-content: center;
-    flex-wrap:  wrap;
+    flex-wrap: wrap;
   }
 
   & .spacer {
@@ -256,24 +249,29 @@ section.products {
     height: auto;
     flex-shrink: 0;
     @media (min-width: 600px) {
+      width: 20px;
+    }
+    @media (min-width: 751px) {
       display: none;
     }
   }
   & .product {
-    width: 100%;
+    // width: 100%;
     flex-shrink: 0;
     border: 1.5px solid #bbbbbb;
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     padding: 40px;
+    width: 80vw;
+    max-width: 350px;
     @media (min-width: 751px) {
       width: calc((100% - 1.5rem) / 2);
       max-width: none;
     }
     @media (min-width: 1024px) {
       width: calc((100% - 3rem) / 3);
-      max-width: none; 
+      max-width: none;
       padding: 30px 40px;
     }
 
@@ -426,6 +424,7 @@ section.products {
       }
     }
   }
+
   & #slider {
     display: flex;
     width: 100%;
@@ -433,20 +432,30 @@ section.products {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-    padding: 0 20px;
+    // padding: 0 20px;
+
+    @media (min-width: 751px) {
+      padding: 0px;
+    }
 
     .slick-slide {
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 1.5rem;
     }
 
     .slick-list {
-      margin-left: -20px;
-      margin-right: -10px;
+      // margin-left: -20px;
+      // margin-right: -10px;
+      padding: 0px 1.5rem;
+      @media (min-width: 600px) {
+        padding: 0px 40px;
+      }
     }
   }
 }
 
+.product_container.no_slider section.products {
+  padding: 6rem 0px 4rem;
+}
 #cta {
   width: 100%;
   max-width: 1300px;
@@ -584,7 +593,7 @@ section.products {
 }
 
 .slick-dots {
-  bottom: -4rem !important;
+  bottom: -3rem !important;
 
   button {
     border-radius: 100%;
