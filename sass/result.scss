@@ -1,7 +1,8 @@
 #heading {
   position: relative;
   width: 100%;
-  height: calc(50vh + 105px);
+  // height: calc(50vh + 105px);
+  height: auto;
   min-height: 200px;
   padding: 0px;
   max-height: 400px;
@@ -16,12 +17,15 @@
 
   & > img.bg-img {
     position: absolute;
-    top: 0px;
+    bottom: 0px;
     left: 0px;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 80px);
     object-fit: cover;
     object-position: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
   }
 
   & > div.opening {
@@ -36,8 +40,11 @@
 
     padding-left: 20px;
     padding-right: 20px;
-
     padding-bottom: 5rem;
+
+    .nodoctor & {
+      padding-bottom: 2.5rem;
+    }
     @media (min-width: 599px) {
       padding-bottom: 3.5rem;
       padding-left: 40px;
@@ -83,15 +90,18 @@
 
       h1 {
         font-family: 'Maison';
-        font-size: 1.563rem;
+        font-size: 30px;
         font-weight: normal;
         line-height: 105%;
 
         @media (min-width: 600px) {
-          font-size: 2.188rem;
+          font-size: 35px;
         }
         & > span {
           display: inline-block;
+          text-decoration: underline;
+          text-decoration-color: #e46b37;
+          text-underline-offset: 3px;
         }
       }
       p {
@@ -100,15 +110,15 @@
         width: 100%;
         line-height: 130%;
         margin-top: 0.5rem;
+        font-size: 15px;
 
         @media (min-width: 751px) {
-          font-size: 1.125rem;
+          font-size: 18px;
           margin: 0;
         }
       }
     }
   }
-
   & > div.doctor {
     z-index: 2;
     position: absolute;
@@ -186,6 +196,10 @@
       }
     }
   }
+
+  .nodoctor & > div.doctor {
+    display: none;
+  }
 }
 
 .cta_container {
@@ -230,12 +244,15 @@ section.products {
   display: flex;
   flex-flow: row nowrap;
   margin: 0 auto;
-  padding: 6rem 0px 6rem;
+  padding: 4rem 0px 3.5rem;
   justify-content: flex-start;
   position: relative;
   gap: 1.5rem;
+  .nodoctor & {
+    padding-top: 3rem;
+  }
   @media (min-width: 751px) {
-    padding: 6rem 0px 4rem;
+    padding: 5rem 0px 4rem;
     width: 100%;
     display: flex;
     max-width: 1300px;
@@ -262,11 +279,13 @@ section.products {
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
-    padding: 40px;
-    width: 80vw;
+    padding: 22px 26px;
+    width: 75vw;
     max-width: 350px;
+    min-width: 250px;
     @media (min-width: 751px) {
       width: calc((100% - 1.5rem) / 2);
+      padding: 30px 40px;
       max-width: none;
     }
     @media (min-width: 1024px) {
